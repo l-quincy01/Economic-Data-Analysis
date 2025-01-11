@@ -1,3 +1,5 @@
 .DS_STORE
+*.env
+/ETL/.env
+*/.env
 
-/ETL/etl_env
