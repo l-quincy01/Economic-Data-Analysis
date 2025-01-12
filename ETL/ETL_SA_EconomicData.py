@@ -66,11 +66,10 @@ def extract_data():
 
 # T
 def transform_data(df):
-    # Convert 'Date' to datetime and set it as the index
+
     df["Date"] = pd.to_datetime(df["Date"])
     df.set_index("Date", inplace=True)
 
-    # Interpolate missing values if necessary ()
     df = df.interpolate(method="linear")
 
     # df = df.dropna()
@@ -86,7 +85,7 @@ def load_data(df, output_path):
     print(f"Data successfully saved to {output_path}")
 
 
-# ETL Process Extraction
+# ETL Process
 if __name__ == "__main__":
     raw_data = extract_data()
 
